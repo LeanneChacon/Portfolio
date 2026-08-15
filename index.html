@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leanne Chacon — Program &amp; Education Leadership</title>
-<meta name="description" content="Leanne Chacon — 15+ years building education programs, curricula, systems, and partnerships.">
+<title>Leanne Chacon — Program &amp; Curriculum Leadership</title>
+<meta name="description" content="Leanne Chacon — 15+ years building international education programs, curricula, and partnerships.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -335,6 +335,50 @@
     margin-top:10px;font-size:12.5px;color:var(--ink-text-dim);opacity:0.6;
   }
 
+  /* ---------- FEATURED WORK (curriculum) ---------- */
+  .feature-grid{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  @media (max-width:700px){
+    .feature-grid{grid-template-columns:1fr;gap:32px;}
+  }
+  .cover-wrap{
+    justify-self:center;
+    filter:drop-shadow(0 22px 40px rgba(0,0,0,0.45));
+  }
+  .cover-wrap svg{display:block;}
+  .feature-copy h3{
+    font-size:26px;
+    color:var(--ink-text);
+    margin-bottom:14px;
+  }
+  .feature-copy p{
+    font-size:15.5px;
+    color:var(--ink-text-dim);
+    max-width:560px;
+    margin-bottom:10px;
+  }
+  .feature-stats{
+    display:flex;gap:28px;flex-wrap:wrap;
+    margin:22px 0 26px;
+  }
+  .feature-stats .stat .num{font-size:22px;}
+  .feature-link{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Inter',sans-serif;font-weight:600;font-size:14.5px;
+    color:var(--ink);
+    background:var(--gold);
+    padding:12px 22px;
+    border-radius:100px;
+    text-decoration:none;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .feature-link:hover{background:var(--clay-soft);transform:translateY(-2px);}
+  .feature-link svg{width:14px;height:14px;}
+
   /* ---------- REVEAL ---------- */
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
   .reveal.in{opacity:1;transform:translateY(0);}
@@ -351,6 +395,7 @@
     <a class="mark" href="#top">L<em>C</em></a>
     <div class="navlinks">
       <a href="#journey">Journey</a>
+      <a href="#curriculum">Curriculum</a>
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
@@ -362,15 +407,20 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="eyebrow">Program &amp; Curriculum Leadership · 15+ Years</div>
+        <div class="eyebrow">Partner &amp; Account Leadership · 15+ Years</div>
         <h1>Leanne <span class="accent">Chacon</span></h1>
-        <p class="hero-tagline">I build the systems, partnerships, and people behind education programs that run year after year, bridging knowledge, cultures, and languages.</p>
+        <p class="hero-tagline">I build the relationships, playbooks, and data-driven systems that keep large partner portfolios healthy, engaged, and retained — across 700+ organizations and four countries.</p>
       </div>
       <div class="hero-photo-wrap">
-        <img class="hero-photo" src="images/leanne-headshot.png" alt="Portrait of Leanne Chacon">
+        <img class="hero-photo" src="leanne-headshot.png" alt="Portrait of Leanne Chacon">
       </div>
     </div>
-    
+    <div class="stat-row">
+      <div class="stat"><div class="num">700+</div><div class="label">Partner organizations</div></div>
+      <div class="stat"><div class="num">65</div><div class="label">Countries represented</div></div>
+      <div class="stat"><div class="num">90%</div><div class="label">Volunteer retention</div></div>
+      <div class="stat"><div class="num">$2.5M+</div><div class="label">Curriculum revenue generated</div></div>
+    </div>
   </div>
 </header>
 
@@ -378,7 +428,7 @@
   <div class="wrap">
     <div class="eyebrow on-paper">Profile</div>
     <p class="profile-text" style="margin-top:16px;">
-      <span class="drop">M</span>y work sits at the intersection of education, people, and partnerships. Over more than fifteen years leading educational and international programs, I've learned that the real job of leadership is bringing clarity to complexity — aligning stakeholders, designing for scale, and never losing sight of the learners a program exists to serve. I'm drawn to institutions worth strengthening, teams worth investing in, and the unglamorous, structural work that makes ambitious visions actually happen.
+      <span class="drop">M</span>y work sits at the intersection of relationships, data, and systems. Over more than fifteen years managing complex partner and stakeholder portfolios, I've learned that the real job of leadership is spotting risk before it becomes a crisis — reading the signals across a portfolio, prioritizing where attention matters most, and building the playbooks that keep engagement and retention strong at scale. I'm drawn to organizations worth partnering with, relationships worth investing in, and the unglamorous, structural work that keeps a portfolio healthy long after the first handshake.
     </p>
   </div>
 </section>
@@ -403,12 +453,12 @@
         <div class="org">Promoted from Program Manager in recognition of leadership, strategy, and organizational impact</div>
         <div class="role">Director of Curriculum and Training</div>
         <ul>
+          <li>Support account management and partner success across a network of <strong>700+ organizations</strong> nationwide, driving engagement, onboarding, and retention.</li>
+          <li>Lead recruitment, training, and retention for <strong>350+ volunteer teachers</strong>, sustaining <strong>90% annual retention</strong> and a <strong>70% student retention rate</strong> among 1,100+ adult learners across 22 states, 65 countries, and 37 languages.</li>
           <li>Sit on the Management Team, shaping organizational strategy, annual planning, and cross-departmental decisions.</li>
           <li>Direct curriculum and professional-learning strategy for nationally distributed adult education programs.</li>
-          <li>Support account management and partner success across a network of <strong>700+ organizations</strong> nationwide.</li>
-          <li>Lead recruitment, training, and retention for <strong>350+ volunteer teachers</strong>, sustaining <strong>90% annual retention</strong> and a <strong>70% student retention rate</strong> among 1,100+ adult learners across 22 states, 65 countries, and 37 languages.</li>
           <li>Oversee the organization's national online conference — most recently <strong>355 participants</strong> across 18 professional-learning sessions.</li>
-          <li>Led development of and cross-functional migration to a new Learning Management System, transitioning <strong>100%</strong> of active volunteer-learner pairs.</li>
+          <li>Led cross-functional migration to a new Learning Management System, transitioning <strong>100%</strong> of active volunteer-learner pairs.</li>
           <li>Delivered <strong>20+</strong> workshops and conference presentations nationwide.</li>
         </ul>
       </div>
@@ -479,6 +529,48 @@
   </div>
 </section>
 
+<section class="reveal" id="curriculum">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Featured Work</div>
+      <h2>The curriculum, in print.</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="cover-wrap">
+        <svg width="220" height="290" viewBox="0 0 220 290" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="220" height="290" rx="6" fill="#f1e9d8"/>
+          <rect x="0" y="0" width="220" height="290" rx="6" fill="none" stroke="rgba(43,36,28,0.14)" stroke-width="1"/>
+          <rect x="0" y="0" width="10" height="290" fill="#b4512e"/>
+          <text x="34" y="46" font-family="Inter, sans-serif" font-size="10" letter-spacing="2" fill="#b4512e" font-weight="600">ADULT ESL CURRICULUM</text>
+          <text x="34" y="98" font-family="Fraunces, serif" font-style="italic" font-size="30" fill="#2b241c">Confidence</text>
+          <text x="34" y="130" font-family="Fraunces, serif" font-style="italic" font-size="30" fill="#2b241c">&amp; Connections</text>
+          <circle cx="52" cy="182" r="15" fill="none" stroke="#c99a44" stroke-width="1.4"/>
+          <circle cx="76" cy="192" r="15" fill="none" stroke="#b4512e" stroke-width="1.4"/>
+          <text x="34" y="240" font-family="Inter, sans-serif" font-size="10.5" letter-spacing="1" fill="#5c5142">LEVELS INTRO–5</text>
+          <text x="34" y="258" font-family="Inter, sans-serif" font-size="10.5" letter-spacing="1" fill="#5c5142">TEACHER &amp; STUDENT EDITIONS</text>
+          <text x="34" y="276" font-family="Fraunces, serif" font-style="italic" font-size="11" fill="#b4512e">Every lesson leads to a conversation.</text>
+        </svg>
+      </div>
+
+      <div class="feature-copy">
+        <h3>Confidence &amp; Connections</h3>
+        <p>As lead writer, I built Intercambio's proprietary adult ESL curriculum from the ground up — a six-level, conversation-first program (Intro through Level 5) used nationwide by volunteer teachers and adult learners in paired teacher-and-student books.</p>
+        <p>It's designed around a simple premise: every lesson leads to a conversation, not just a grammar drill — so learners build real confidence alongside real skill.</p>
+        <div class="feature-stats">
+          <div class="stat"><div class="num">150K+</div><div class="label">Copies sold nationwide</div></div>
+          <div class="stat"><div class="num">$2.5M+</div><div class="label">Earned revenue</div></div>
+          <div class="stat"><div class="num">6</div><div class="label">Curriculum levels</div></div>
+        </div>
+        <a class="feature-link" href="https://intercambio.org/resources-and-training/adult-esl-curriculum/" target="_blank" rel="noopener">
+          View the curriculum
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="on-paper reveal" id="education">
   <div class="wrap">
     <div class="section-head">
@@ -520,10 +612,31 @@
     </div>
 
     <div class="comp-group">
+      <h3>Accounts &amp; Partnerships</h3>
+      <div class="pills">
+        <span class="pill strong">Partner &amp; Account Engagement</span>
+        <span class="pill strong">Volunteer Recruitment, Engagement &amp; Retention</span>
+        <span class="pill">Public Speaking &amp; Workshop Delivery</span>
+        <span class="pill">Training &amp; Facilitation</span>
+        <span class="pill">Cultural Humility &amp; Inclusive Practices</span>
+        <span class="pill">International &amp; Intercultural Education</span>
+      </div>
+    </div>
+    <div class="comp-group">
+      <h3>Leadership &amp; Strategy</h3>
+      <div class="pills">
+        <span class="pill strong">Data Analysis &amp; Continuous Improvement</span>
+        <span class="pill strong">Strategic Planning</span>
+        <span class="pill">Cross-Functional Leadership</span>
+        <span class="pill">Project &amp; Change Management</span>
+        <span class="pill">Nonprofit Leadership</span>
+      </div>
+    </div>
+    <div class="comp-group">
       <h3>Program &amp; Curriculum</h3>
       <div class="pills">
-        <span class="pill strong">Curriculum Development</span>
-        <span class="pill strong">Learning Experience Design</span>
+        <span class="pill">Curriculum Development</span>
+        <span class="pill">Learning Experience Design</span>
         <span class="pill">Adult Learning &amp; Professional Development</span>
         <span class="pill">Blended &amp; Online Learning</span>
         <span class="pill">TESOL</span>
@@ -531,31 +644,10 @@
       </div>
     </div>
     <div class="comp-group">
-      <h3>Leadership &amp; Strategy</h3>
-      <div class="pills">
-        <span class="pill strong">Strategic Planning</span>
-        <span class="pill strong">Cross-Functional Leadership</span>
-        <span class="pill">Project &amp; Change Management</span>
-        <span class="pill">Data Analysis &amp; Continuous Improvement</span>
-        <span class="pill">Nonprofit Leadership</span>
-      </div>
-    </div>
-    <div class="comp-group">
-      <h3>People &amp; Partnerships</h3>
-      <div class="pills">
-        <span class="pill strong">Partner &amp; Account Engagement</span>
-        <span class="pill">Volunteer Recruitment, Engagement &amp; Retention</span>
-        <span class="pill">Training &amp; Facilitation</span>
-        <span class="pill">Public Speaking &amp; Workshop Delivery</span>
-        <span class="pill">Cultural Humility &amp; Inclusive Practices</span>
-        <span class="pill">International &amp; Intercultural Education</span>
-      </div>
-    </div>
-    <div class="comp-group">
       <h3>Tools</h3>
       <div class="pills">
+        <span class="pill strong">Salesforce CRM</span>
         <span class="pill">Learning Management Systems</span>
-        <span class="pill">Salesforce CRM</span>
         <span class="pill">Asana</span>
         <span class="pill">WordPress</span>
         <span class="pill">Canva · Adobe Creative Cloud</span>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leanne Chacon — Program &amp; Curriculum Leadership</title>
+<meta name="description" content="Leanne Chacon — 15+ years building international education programs, curricula, and partnerships.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1712;
+    --ink-soft:#241d16;
+    --paper:#f1e9d8;
+    --paper-dim:#e9dfc9;
+    --ink-text:#efe6d3;
+    --ink-text-dim:#c9bfa9;
+    --body-text:#2b241c;
+    --body-text-dim:#5c5142;
+    --clay:#b4512e;
+    --clay-soft:#cf6a44;
+    --gold:#c99a44;
+    --teal:#5f7d74;
+    --line-dark:rgba(239,230,211,0.18);
+    --line-light:rgba(43,36,28,0.14);
+    --maxw:920px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--ink-text);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  ::selection{background:var(--clay);color:var(--paper);}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--clay-soft);
+  }
+  .eyebrow.on-paper{color:var(--clay);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(28,23,18,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-dark);
+  }
+  nav .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:64px;
+  }
+  .mark{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:22px;
+    color:var(--ink-text);
+    text-decoration:none;
+    letter-spacing:0.01em;
+  }
+  .mark em{font-style:italic;color:var(--clay-soft);}
+  .navlinks{display:flex;gap:28px;font-size:14px;}
+  .navlinks a{text-decoration:none;color:var(--ink-text-dim);transition:color .2s;}
+  .navlinks a:hover{color:var(--ink-text);}
+  @media (max-width:640px){ .navlinks{display:none;} }
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:96px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  header.hero::before{
+    content:"";
+    position:absolute;
+    top:-120px;right:-160px;
+    width:480px;height:480px;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, rgba(180,81,46,0.22), transparent 70%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:56px;
+    align-items:center;
+  }
+  .hero-photo-wrap{
+    position:relative;
+    width:220px;height:220px;
+    justify-self:end;
+  }
+  .hero-photo-wrap::before{
+    content:"";
+    position:absolute;
+    top:-14px;left:-14px;
+    width:100%;height:100%;
+    border:1.5px solid var(--clay-soft);
+    border-radius:50%;
+    opacity:0.55;
+  }
+  .hero-photo{
+    width:220px;height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    box-shadow:0 20px 50px rgba(0,0,0,0.45);
+    border:3px solid var(--ink-soft);
+  }
+  @media (max-width:760px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .hero-photo-wrap{justify-self:start;width:140px;height:140px;}
+    .hero-photo-wrap::before{width:140px;height:140px;}
+    .hero-photo{width:140px;height:140px;}
+  }
+  .hero h1{
+    font-size:clamp(42px,7vw,72px);
+    line-height:1.02;
+    color:var(--ink-text);
+    margin-top:18px;
+  }
+  .hero h1 .accent{color:var(--clay-soft);font-style:italic;}
+  .hero-tagline{
+    max-width:560px;
+    margin-top:22px;
+    font-size:19px;
+    color:var(--ink-text-dim);
+    line-height:1.55;
+  }
+  .stat-row{
+    display:flex;flex-wrap:wrap;gap:36px;
+    margin-top:56px;
+    padding-top:32px;
+    border-top:1px solid var(--line-dark);
+  }
+  .stat{min-width:120px;}
+  .stat .num{
+    font-family:'Fraunces',serif;
+    font-size:30px;
+    color:var(--gold);
+  }
+  .stat .label{
+    font-size:12.5px;
+    color:var(--ink-text-dim);
+    margin-top:4px;
+    letter-spacing:0.02em;
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:88px 0;}
+  section.on-paper{background:var(--paper);color:var(--body-text);}
+  section.on-paper .eyebrow{color:var(--clay);}
+  .section-head{margin-bottom:44px;max-width:640px;}
+  .section-head h2{
+    font-size:clamp(28px,4vw,38px);
+    margin-top:12px;
+  }
+  .on-dark .section-head h2{color:var(--ink-text);}
+  .on-paper .section-head h2{color:var(--body-text);}
+
+  /* ---------- PROFILE ---------- */
+  .profile-text{
+    font-family:'Fraunces',serif;
+    font-weight:400;
+    font-size:clamp(20px,2.6vw,25px);
+    line-height:1.55;
+    color:var(--body-text);
+    max-width:760px;
+  }
+  .profile-text .drop{
+    float:left;font-size:3.6em;line-height:0.8;
+    padding:0.06em 0.08em 0 0;
+    color:var(--clay);font-style:italic;
+  }
+
+  /* ---------- JOURNEY (signature element) ---------- */
+  .journey{position:relative;}
+  .journey-line{
+    position:absolute;
+    left:9px;top:8px;bottom:8px;
+    width:2px;
+    background:repeating-linear-gradient(to bottom, var(--clay-soft) 0 6px, transparent 6px 12px);
+  }
+  @media (max-width:640px){ .journey-line{left:7px;} }
+  .node{
+    position:relative;
+    padding-left:44px;
+    margin-bottom:56px;
+  }
+  .node:last-child{margin-bottom:0;}
+  .node-dot{
+    position:absolute;left:0;top:6px;
+    width:20px;height:20px;border-radius:50%;
+    background:var(--ink);
+    border:2px solid var(--clay-soft);
+  }
+  .node-dot::after{
+    content:"";position:absolute;inset:4px;
+    border-radius:50%;background:var(--gold);
+  }
+  .node-meta{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;
+    margin-bottom:6px;
+  }
+  .node-years{
+    font-family:'Fraunces',serif;font-style:italic;
+    color:var(--gold);font-size:15px;
+  }
+  .node-place{
+    font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--ink-text-dim);
+  }
+  .node h3{
+    font-size:23px;color:var(--ink-text);margin-bottom:2px;
+  }
+  .node .org{
+    font-size:14.5px;color:var(--ink-text-dim);margin-bottom:14px;
+  }
+  .node .role{
+    font-family:'Inter',sans-serif;font-weight:600;
+    font-size:14.5px;color:var(--clay-soft);
+    margin-bottom:12px;
+  }
+  .node ul{
+    margin:0;padding-left:18px;
+    color:var(--ink-text-dim);
+    font-size:15px;line-height:1.65;
+  }
+  .node ul li{margin-bottom:7px;}
+  .node ul li::marker{color:var(--clay-soft);}
+  .node ul li strong{color:var(--ink-text);font-weight:600;}
+
+  /* ---------- EDUCATION ---------- */
+  .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media (max-width:640px){ .edu-grid{grid-template-columns:1fr;} }
+  .edu-card{
+    border-top:1px solid var(--line-light);
+    padding-top:18px;
+  }
+  .edu-card h3{font-size:18px;color:var(--body-text);margin-bottom:4px;}
+  .edu-card .school{font-size:14px;color:var(--body-text-dim);margin-bottom:2px;}
+  .edu-card .when{font-size:13px;color:var(--clay);}
+
+  /* ---------- COMPETENCIES ---------- */
+  .comp-group{margin-bottom:30px;}
+  .comp-group h3{
+    font-size:13px;text-transform:uppercase;letter-spacing:0.1em;
+    font-family:'Inter',sans-serif;font-weight:600;
+    color:var(--ink-text-dim);margin-bottom:14px;
+  }
+  .pills{display:flex;flex-wrap:wrap;gap:9px;}
+  .pill{
+    font-size:13.5px;padding:7px 14px;
+    border:1px solid var(--line-dark);
+    border-radius:100px;
+    color:var(--ink-text-dim);
+    white-space:nowrap;
+  }
+  .pill.strong{border-color:var(--clay-soft);color:var(--ink-text);}
+
+  /* ---------- THREE COL BAND ---------- */
+  .band-grid{
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;
+  }
+  @media (max-width:800px){ .band-grid{grid-template-columns:1fr;gap:36px;} }
+  .band-col h3{
+    font-size:13px;text-transform:uppercase;letter-spacing:0.1em;
+    font-family:'Inter',sans-serif;font-weight:600;
+    color:var(--clay);margin-bottom:16px;
+  }
+  .band-col ul{list-style:none;margin:0;padding:0;}
+  .band-col li{
+    font-size:15px;color:var(--body-text);
+    padding:10px 0;border-top:1px solid var(--line-light);
+  }
+  .band-col li:first-of-type{border-top:none;padding-top:0;}
+  .lang-level{display:block;font-size:12.5px;color:var(--body-text-dim);margin-top:2px;}
+
+  .recognition{
+    margin-top:56px;padding-top:40px;border-top:1px solid var(--line-light);
+    display:flex;gap:20px;align-items:flex-start;
+  }
+  .recognition .glyph{
+    font-family:'Fraunces',serif;font-style:italic;font-size:34px;color:var(--clay);
+    line-height:1;
+  }
+  .recognition p{font-size:16px;color:var(--body-text);max-width:560px;}
+  .recognition .when{display:block;margin-top:6px;font-size:13px;color:var(--body-text-dim);}
+
+  /* ---------- CTA / FOOTER ---------- */
+  footer{
+    padding:96px 0 56px;
+    text-align:center;
+    position:relative;
+  }
+  footer h2{
+    font-size:clamp(30px,5vw,44px);
+    color:var(--ink-text);
+    max-width:620px;
+    margin:18px auto 0;
+  }
+  footer .cta-note{
+    margin:24px auto 0;
+    max-width:460px;
+    color:var(--ink-text-dim);
+    font-size:15.5px;
+  }
+  footer .foot-mark{
+    margin-top:64px;
+    font-family:'Fraunces',serif;font-style:italic;
+    font-size:20px;color:var(--ink-text-dim);
+  }
+  footer .copyright{
+    margin-top:10px;font-size:12.5px;color:var(--ink-text-dim);opacity:0.6;
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top">L<em>C</em></a>
+    <div class="navlinks">
+      <a href="#journey">Journey</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Program &amp; Curriculum Leadership · 15+ Years</div>
+        <h1>Leanne <span class="accent">Chacon</span></h1>
+        <p class="hero-tagline">I build the systems, partnerships, and people behind international education programs that actually run — year after year, across borders and languages.</p>
+      </div>
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="images/leanne-headshot.png" alt="Portrait of Leanne Chacon">
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="num">700+</div><div class="label">Partner organizations</div></div>
+      <div class="stat"><div class="num">65</div><div class="label">Countries represented</div></div>
+      <div class="stat"><div class="num">90%</div><div class="label">Volunteer retention</div></div>
+      <div class="stat"><div class="num">$2.5M+</div><div class="label">Curriculum revenue generated</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="on-paper reveal" id="profile">
+  <div class="wrap">
+    <div class="eyebrow on-paper">Profile</div>
+    <p class="profile-text" style="margin-top:16px;">
+      <span class="drop">M</span>y work sits at the intersection of curriculum, people, and partnership. Over more than fifteen years leading educational and international programs, I've learned that the real job of leadership is bringing clarity to complexity — aligning stakeholders, designing for scale, and never losing sight of the learners a program exists to serve. I'm drawn to institutions worth strengthening, teams worth investing in, and the unglamorous, structural work that makes ambitious visions actually happen.
+    </p>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Path</div>
+      <h2>Two decades, four countries, one throughline.</h2>
+    </div>
+
+    <div class="journey">
+      <div class="journey-line"></div>
+
+      <div class="node reveal">
+        <div class="node-dot"></div>
+        <div class="node-meta">
+          <span class="node-years">2020 — Present</span>
+          <span class="node-place">Boulder, Colorado</span>
+        </div>
+        <h3>Intercambio Uniting Communities</h3>
+        <div class="org">Promoted from Program Manager in recognition of leadership, strategy, and organizational impact</div>
+        <div class="role">Director of Curriculum and Training</div>
+        <ul>
+          <li>Sit on the Management Team, shaping organizational strategy, annual planning, and cross-departmental decisions.</li>
+          <li>Direct curriculum and professional-learning strategy for nationally distributed adult education programs.</li>
+          <li>Support account management and partner success across a network of <strong>700+ organizations</strong> nationwide.</li>
+          <li>Lead recruitment, training, and retention for <strong>350+ volunteer teachers</strong>, sustaining <strong>90% annual retention</strong> and a <strong>70% student retention rate</strong> among 1,100+ adult learners across 22 states, 65 countries, and 37 languages.</li>
+          <li>Oversee the organization's national online conference — most recently <strong>355 participants</strong> across 18 professional-learning sessions.</li>
+          <li>Led cross-functional migration to a new Learning Management System, transitioning <strong>100%</strong> of active volunteer-learner pairs.</li>
+          <li>Delivered <strong>20+</strong> workshops and conference presentations nationwide.</li>
+        </ul>
+      </div>
+
+      <div class="node reveal">
+        <div class="node-dot"></div>
+        <div class="node-meta">
+          <span class="node-years">2015 — 2020</span>
+          <span class="node-place">Boulder, Colorado</span>
+        </div>
+        <h3>Intercambio Uniting Communities</h3>
+        <div class="role">Academic Coordinator / Program Manager / Curriculum Writer</div>
+        <ul>
+          <li>Lead writer of the organization's proprietary adult English curriculum — <strong>150,000+ copies</strong> sold, generating <strong>$2.5M+</strong> in earned revenue.</li>
+          <li>Recruited, trained, and supported roughly <strong>350 volunteer teachers</strong> annually with ongoing coaching and relationship management.</li>
+          <li>Built lasting relationships with educators and community partners, delivering culturally responsive training that improved engagement and program success.</li>
+        </ul>
+      </div>
+
+      <div class="node reveal">
+        <div class="node-dot"></div>
+        <div class="node-meta">
+          <span class="node-years">2013 — 2014</span>
+          <span class="node-place">Carolina, Puerto Rico</span>
+        </div>
+        <h3>Universidad del Este (UNE)</h3>
+        <div class="org">Ana G. Méndez University System</div>
+        <div class="role">Director of International Affairs</div>
+        <ul>
+          <li>Promoted to Director in recognition of leadership and successful execution of international initiatives.</li>
+          <li>Coordinated global partnership agreements with institutions in Mexico, Colombia, Germany, China, Finland, Brazil, Spain, and the U.S.</li>
+          <li>Secured and managed a <strong>$229K U.S. Department of State grant</strong> to launch and oversee the UNE Study Abroad in China Project.</li>
+        </ul>
+      </div>
+
+      <div class="node reveal">
+        <div class="node-dot"></div>
+        <div class="node-meta">
+          <span class="node-years">2010 — 2013</span>
+          <span class="node-place">Carolina, Puerto Rico</span>
+        </div>
+        <h3>Universidad del Este (UNE)</h3>
+        <div class="org">Ana G. Méndez University System</div>
+        <div class="role">International Affairs Coordinator</div>
+        <ul>
+          <li>Managed and strengthened international university partnerships and client relationships to drive program participation and growth.</li>
+          <li>Guided students, faculty, and international participants through study abroad, Fulbright, and global seminar processes.</li>
+          <li>Coordinated international scholar visits and cross-cultural programming across partner institutions.</li>
+        </ul>
+      </div>
+
+      <div class="node reveal">
+        <div class="node-dot"></div>
+        <div class="node-meta">
+          <span class="node-years">2006 — 2009</span>
+          <span class="node-place">Santiago, Chile</span>
+        </div>
+        <h3>Instituto Chileno Norteamericano</h3>
+        <div class="org">U.S. Embassy–affiliated binational center</div>
+        <div class="role">Project Coordinator / English Teacher / Press Translator</div>
+        <ul>
+          <li>Led a nationwide English program serving <strong>400+ adult learners</strong> across Chile.</li>
+          <li>Recruited, trained, and supported <strong>50+ volunteers</strong> annually for the English Opens Doors Program.</li>
+          <li>Served as lead Spanish–English translator for El Mercurio's national online English news platform.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-paper reveal" id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow on-paper">Education</div>
+      <h2>Grounded in language and global studies.</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h3>Master of Education, Global Studies in Education</h3>
+        <div class="school">University of Illinois Urbana-Champaign</div>
+        <div class="when">Graduated December 2012</div>
+      </div>
+      <div class="edu-card">
+        <h3>B.A., International Spanish for the Professions</h3>
+        <div class="school">Business Administration Minor · University of Colorado Boulder</div>
+        <div class="when">Graduated December 2005</div>
+      </div>
+      <div class="edu-card">
+        <h3>Year-Long Study Abroad</h3>
+        <div class="school">Instituto Tecnológico y de Estudios Superiores de Monterrey · Nuevo León, México</div>
+        <div class="when">2003 – 2004</div>
+      </div>
+    </div>
+
+    <div class="recognition">
+      <div class="glyph">”</div>
+      <p>Selected as the first Alumni Commencement Speaker by the University of Colorado Boulder's Department of Spanish &amp; Portuguese, recognizing leadership and impact in the field.
+        <span class="when">May 2023</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Core Competencies</div>
+      <h2>Where I add the most value.</h2>
+    </div>
+
+    <div class="comp-group">
+      <h3>Program &amp; Curriculum</h3>
+      <div class="pills">
+        <span class="pill strong">Curriculum Development</span>
+        <span class="pill strong">Learning Experience Design</span>
+        <span class="pill">Adult Learning &amp; Professional Development</span>
+        <span class="pill">Blended &amp; Online Learning</span>
+        <span class="pill">TESOL</span>
+        <span class="pill">Language Acquisition</span>
+      </div>
+    </div>
+    <div class="comp-group">
+      <h3>Leadership &amp; Strategy</h3>
+      <div class="pills">
+        <span class="pill strong">Strategic Planning</span>
+        <span class="pill strong">Cross-Functional Leadership</span>
+        <span class="pill">Project &amp; Change Management</span>
+        <span class="pill">Data Analysis &amp; Continuous Improvement</span>
+        <span class="pill">Nonprofit Leadership</span>
+      </div>
+    </div>
+    <div class="comp-group">
+      <h3>People &amp; Partnerships</h3>
+      <div class="pills">
+        <span class="pill strong">Partner &amp; Account Engagement</span>
+        <span class="pill">Volunteer Recruitment, Engagement &amp; Retention</span>
+        <span class="pill">Training &amp; Facilitation</span>
+        <span class="pill">Public Speaking &amp; Workshop Delivery</span>
+        <span class="pill">Cultural Humility &amp; Inclusive Practices</span>
+        <span class="pill">International &amp; Intercultural Education</span>
+      </div>
+    </div>
+    <div class="comp-group">
+      <h3>Tools</h3>
+      <div class="pills">
+        <span class="pill">Learning Management Systems</span>
+        <span class="pill">Salesforce CRM</span>
+        <span class="pill">Asana</span>
+        <span class="pill">WordPress</span>
+        <span class="pill">Canva · Adobe Creative Cloud</span>
+        <span class="pill">Microsoft 365 · Google Suite</span>
+        <span class="pill">Gravity Forms · JotForm</span>
+        <span class="pill">Slack</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-paper reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow on-paper">Beyond the Role</div>
+      <h2>Languages, credentials &amp; governance.</h2>
+    </div>
+    <div class="band-grid">
+      <div class="band-col">
+        <h3>Languages</h3>
+        <ul>
+          <li>English &amp; Spanish<span class="lang-level">Fully bilingual — speaking, reading, and writing</span></li>
+          <li>French<span class="lang-level">Basic</span></li>
+          <li>Portuguese<span class="lang-level">Basic</span></li>
+        </ul>
+      </div>
+      <div class="band-col">
+        <h3>Certifications</h3>
+        <ul>
+          <li>i-to-i TEFL Certification</li>
+          <li>Nonprofit Finance</li>
+          <li>Mental Health First Aid</li>
+          <li>Strengths-Based Service Delivery</li>
+          <li>Motivational Interviewing</li>
+          <li>Emotional Intelligence</li>
+        </ul>
+      </div>
+      <div class="band-col">
+        <h3>Governance &amp; Leadership</h3>
+        <ul>
+          <li>Management Team</li>
+          <li>Strategic Planning Committee <span class="lang-level">Board Liaison</span></li>
+          <li>Program Evaluation <span class="lang-level">Board Liaison</span></li>
+          <li>Diversity, Equity &amp; Inclusion Committee <span class="lang-level">Board Liaison</span></li>
+          <li>Community Engagement Advisory Council</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="reveal">
+  <div class="wrap">
+    <div class="eyebrow">Let's Connect</div>
+    <h2>Building a program worth strengthening? I'd like to hear about it.</h2>
+    <p class="cta-note">Reach out using the contact details on my resume — I'm always glad to talk curriculum, partnerships, or program strategy.</p>
+    <div class="foot-mark">L<em>C</em></div>
+    <div class="copyright">© <span id="year"></span> Leanne Chacon</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
